@@ -12,8 +12,8 @@ public abstract class Living
     private readonly Dice _dice4;
     private readonly Dice _dice6;
 
-    public int End { get; }
-    public int For { get; }
+    public virtual int End { get; }
+    public virtual int For { get; }
     public int Life { get; private set; }
     public string Name { get; }
     public bool IsAlive => Life > 0; 
