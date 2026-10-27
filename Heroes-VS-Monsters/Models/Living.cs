@@ -16,6 +16,7 @@ public abstract class Living
     public int For { get; }
     public int Life { get; private set; }
     public string Name { get; }
+    public bool IsAlive => Life > 0; 
 
     public Living(string name)
     {
