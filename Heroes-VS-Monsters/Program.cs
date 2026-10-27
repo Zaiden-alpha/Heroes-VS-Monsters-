@@ -1,16 +1,21 @@
-﻿using HeroesVSMonsters.Model;
+﻿namespace HeroesVSMonsters.Models;
 
-List<Monster> monstres = new List<Monster>
-{
-    new Monster(50, 10, "Gobelin"),
-    new Monster(80, 15, "Orc"),
-    new Monster(200, 40, "Dragon"),
-    new Monster(120, 20, "Troll")
-};
 
-foreach (Monster m in monstres)
+internal class Program
 {
-    Console.WriteLine($"{m.Nom} : endurance {m.Endurance}, force {m.Force}");
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+
+
+        Hero hero = new();
+        Console.WriteLine(hero);
+
+        hero.Loot(new Wolf());
+        hero.Loot(new Wolf());
+        hero.Loot(new Orc());
+        hero.Loot(new Orc());
+        hero.Loot(new Dragon());
+        hero.Loot(new Dragon());
+    }
 }
-
-monstres[0].Attaquer(monstres[1]);
