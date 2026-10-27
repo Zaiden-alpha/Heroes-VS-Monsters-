@@ -4,7 +4,7 @@ namespace HeroesVSMonsters.Models;
 
 public class Dice
 {
-    public static int GetCharacteristic()
+    public static int GetCaracteristic()
     {
         Dice dice = new Dice(6);
         return Enumerable.Range(0,4)
