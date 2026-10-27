@@ -1,0 +1,35 @@
+namespace HeroesVSMonsters.Model
+{
+    public class Monster
+    {
+      public int Endurance {get; set;}
+      public int Force {get; set;}
+      public string Nom {get; set;}
+
+
+     public Monster (int endurance, int force, string nom)
+    {
+        Endurance = endurance;
+        Force = force;
+        Nom = nom;
+
+    }
+
+   
+     
+     public void Attaquer(Monster cible)
+    {
+        cible.Endurance -= Force;
+        if (cible.Endurance < 0)
+            cible.Endurance = 0;
+
+        Console.WriteLine($"{Nom} attaque {cible.Nom} et lui inflige {Force} dégâts. Il lui reste {cible.Endurance} d'endurance.");
+    }
+
+    public bool EstVivant()
+    {
+        return Endurance > 0;
+    }
+
+    }
+}
