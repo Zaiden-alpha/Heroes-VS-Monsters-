@@ -40,9 +40,10 @@ public abstract class Living
         Life = End + GetModifier(End);
     }
 
-    public void Attack(Living living)
+    public void Attack(Living target)
     {
         int damage = _dice4.Next() + GetModifier(For);
+        target.Life -= damage;
     }
 
     public override string ToString()
